@@ -7,5 +7,7 @@ import { createServer } from "./server";
 
 initConfig();
 
-const app: express.Application = createApp([/*users, files, test*/]);
+import { router as oauth } from "./routes/oauth/index";
+
+const app: express.Application = createApp([oauth]);
 const server: http.Server = createServer(app);
